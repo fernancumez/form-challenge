@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto Formulario</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <!-- 
+    Nombre
+    Apellido
+    Genero
+    correo electronico
+    Fecha de nacimiento
+
+  -->
+
+  <body>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombre"
+          placeholder="Escribe tu nombre"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input
+          type="text"
+          class="form-control"
+          id="apellido"
+          placeholder="Escribe tu apellido"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="genero">Género</label>
+        <select class="form-control" id="genero">
+          <option></option>
+          <option>Masculino</option>
+          <option>Femenino</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo electronico</label>
+        <input
+          type="email"
+          class="form-control"
+          id="correo"
+          placeholder="Ingrese su correo electronico"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="pass">Contraseña</label>
+        <input
+          type="password"
+          class="form-control"
+          id="pass"
+          placeholder="Ingrese su correo contraseña"
+          required
+        />
+      </div>
+      <!-- <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div> -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <script src="index.js"></script>
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
