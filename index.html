@@ -4,58 +4,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reto Formulario</title>
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/litera/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
 
   <body>
-    <form onsubmit="handleSubmit(event)" class="form">
-      <h2>Formulario</h2>
-      <div>
-        <label for="nombre">Nombre</label>
-        <input
-          type="text"
-          class="form-control"
-          id="nombre"
-          placeholder="Escribe tu nombre"
-          required
-        />
-      </div>
+    <nav class="navbar navbar-light bg-light">
+      <a href="#" class="navbar-brand"> Reto Formulario </a>
+    </nav>
 
-      <div>
-        <label for="apellido">Apellido</label>
-        <input
-          type="text"
-          class="form-control"
-          id="apellido"
-          placeholder="Escribe tu apellido"
-          required
-        />
-      </div>
+    <div class="container">
+      <div class="row pt-5" id="app">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h4>Formulario</h4>
+            </div>
 
-      <div>
-        <label for="correo">Correo electronico</label>
-        <input
-          type="email"
-          class="form-control"
-          id="correo"
-          placeholder="Ingrese su correo electronico"
-          required
-        />
-      </div>
+            <form
+              method="POST"
+              class="card-body"
+              id="user-form"
+              onsubmit="handleSubmit(event)"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Nombre"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Apellido"
+                  required
+                />
+              </div>
 
-      <div>
-        <label for="pass">Contraseña</label>
-        <input
-          type="password"
-          class="form-control"
-          id="pass"
-          placeholder="Ingrese su correo contraseña"
-          required
-        />
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Correo Electrónico"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Contraseña"
+                  minlength="6"
+                  required
+                />
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">
+                Guardar
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-8" id="user-list">
+          <div class="card text-center mb-4">
+            <div class="card-body">
+              <strong>Usuario:</strong>fernado
+              <strong>Correo:</strong>fernancumez@gmail.com
+              <button
+                class="btn btn-danger"
+                type="button"
+                name="delete"
+                onclick="handleDelete(event)"
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+    </div>
 
     <script src="js/index.js"></script>
+    <script src="js/User.js"></script>
+    <script src="js/Interface.js"></script>
   </body>
 </html>
